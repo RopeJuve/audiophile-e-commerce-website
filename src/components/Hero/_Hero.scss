@@ -2,7 +2,8 @@
 
 .hero__container {
   position: relative;
-  grid-row: 1/2;
+  padding: 4rem 2.2rem;
+  height: 32.938rem;
   & img {
     position: absolute;
     top: 0;
@@ -13,7 +14,11 @@
   }
   &-prod-content {
     text-align: center;
-
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  
     .overline {
       font-size: v.$fsOverline;
       font-weight: 400;
