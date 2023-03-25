@@ -1,0 +1,20 @@
+@use '../../styles/variables' as v;
+
+.nav-bar__container{
+    padding: 1.5rem 1rem;
+    background-color: v.$secondaryColor;
+    border-bottom: 1px solid v.$primaryColor;
+
+    &-navLinks-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: v.$primaryColor;
+
+       & img {
+        cursor: pointer;
+       }
+    }
+
+  
+}

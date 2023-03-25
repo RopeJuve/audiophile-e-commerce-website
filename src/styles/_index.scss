@@ -1,0 +1,72 @@
+@use './_variables.scss' as v;
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Manrope';
+  font-size: v.$fsBody;
+  line-height: v.$lSpaceBody;
+  font-weight: 500;
+  color: v.$secondaryColor;
+}
+
+h1{
+  font-weight: 700;
+  font-size: v.$fs1;
+  line-height: v.$lSpace1;
+  letter-spacing: v.$chSpace1;
+}
+h2{
+  font-weight: 700;
+  font-size: v.$fs2;
+  line-height: v.$lSpace2;
+  letter-spacing: v.$chSpace2;
+}
+h3{
+  font-weight: 700;
+  font-size: v.$fs3;
+  line-height: v.$lSpace3;
+  letter-spacing: v.$chSpace3;
+}
+h4{
+  font-weight: 700;
+  font-size: v.$fs4;
+  line-height: v.$lSpace4;
+  letter-spacing: v.$chSpace4;
+}
+h5{
+  font-weight: 700;
+  font-size: v.$fs5;
+  line-height: v.$lSpace5;
+  letter-spacing: v.$chSpace5;
+}
+h6{
+  font-weight: 700;
+  font-size: v.$fs6;
+  line-height: v.$lSpace6;
+  letter-spacing: v.$chSpace6;
+}
+
+p{
+  opacity: 0.5;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: v.$aTagColor;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+
+
+
