@@ -1,0 +1,54 @@
+@use "../../styles/variables" as v;
+
+.hero__container {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 0.3fr 0.5fr 0.5fr 0.5fr 1fr;
+  grid-row: 1/2;
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  &-prod-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 0.8fr;
+    text-align: center;
+    grid-row: 3 / 6;
+    .overline {
+      grid-column: 2/3;
+      font-size: v.$fsOverline;
+      font-weight: 400;
+      line-height: v.$lSpaceOverline;
+      letter-spacing: v.$chSpaceOverline;
+      color: v.$primaryColor;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 1rem;
+    }
+    & h2 {
+      grid-column: 2/3;
+      color: v.$primaryColor !important;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    & p {
+      grid-column: 2/3;
+      color: v.$primaryColor;
+      margin-bottom: 1.5rem;
+    }
+
+    & button {
+      grid-column: 2/3;
+      transition: all 0.3s ease-in-out;
+      color: v.$primaryColor;
+      background-color: v.$accentColor;
+      &:hover {
+        background-color: v.$buttonHover;
+      }
+    }
+  }
+}

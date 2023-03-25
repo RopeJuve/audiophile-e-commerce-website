@@ -1,0 +1,5 @@
+.layout-home__container{
+    display: grid;
+    grid-template-rows: calc(100vh - 73px) 1fr 3fr 1fr;
+    row-gap: 1.5rem;
+}
