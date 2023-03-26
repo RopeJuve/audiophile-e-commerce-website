@@ -1,20 +1,71 @@
-@use '../../styles/variables' as v;
+@use "../../styles/variables" as v;
 
-.nav-bar__container{
-    padding: 1.5rem 1rem;
-    background-color: v.$secondaryColor;
-    border-bottom: 1px solid v.$primaryColor;
+.nav-bar__container {
+  position: relative;
+  padding: 1.5rem 1rem;
+  background-color: v.$secondaryColor;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
-    &-navLinks-wrapper{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: v.$primaryColor;
+  &-navLinks-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: v.$primaryColor;
 
-       & img {
-        cursor: pointer;
-       }
+    & img {
+      cursor: pointer;
+    }
+  }
+  &-menu {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    animation: right 1s ease-in-out forwards, fade-out 0.5s ease forwards;
+    z-index: 1;
+
+    &.open {
+      top: 100%;
+      left: 0;
+      animation: left 1s ease-in-out forwards, fade-in 1.5s ease forwards;
+      z-index: 1;
     }
 
-  
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-out {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
+    @keyframes left {
+      from {
+        transform: translateX(-150%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes right {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-150%);
+      }
+    }
+  }
 }

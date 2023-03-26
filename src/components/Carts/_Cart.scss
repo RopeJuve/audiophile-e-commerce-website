@@ -1,0 +1,50 @@
+@use '../../styles/variables' as v;
+
+.cart__container{
+    display: grid;
+    border-radius: 0.5rem;
+    background-color: v.$cartBg;
+    padding-bottom: 1rem;
+    margin-bottom: 4rem;
+    &-wrapper{
+        text-align: center;
+        justify-self: center;
+        & img{
+            transform: translateY(-3rem);
+        }
+
+        .shadow{
+            margin: 0 auto;
+            transform: translateY(-4rem);
+            width: 5.8rem;
+            height: 0.875rem;
+            background-color: v.$secondaryColor;
+            filter: blur(1.375rem);
+        }
+
+        & h6{
+            margin-top: -2.25rem;
+            margin-bottom: 1rem;
+            font-size: v.$fsBody;
+            text-transform: uppercase;
+        }
+
+        & a{
+            color: v.$secondaryColor;
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+
+        .shop-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            & img{
+                transform: translateY(0);
+                cursor: pointer;
+            }
+        }
+    }
+}
