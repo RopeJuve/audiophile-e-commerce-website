@@ -3,6 +3,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import LayoutHome from "../Layouts/LayoutHome";
 import Hero from "../../components/Hero/Hero";
 import Carts from "../../components/Carts/Carts";
+import ProductLinks from "../../components/ProductLinks/ProductLinks";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <LayoutHome>
         <Hero />
         <Carts />
+        <ProductLinks />
       </LayoutHome>
     </div>
   );
