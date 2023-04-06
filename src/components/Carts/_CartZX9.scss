@@ -5,6 +5,7 @@
   background-color: v.$accentColor;
   padding: 0.5rem 1.5rem 3.5rem 1.5rem;
   border-radius: 0.5rem;
+  overflow: hidden;
   & h2 {
     font-size: 2.25rem;
     margin: 0 auto;
@@ -33,7 +34,7 @@
   margin: 0 auto;
   width: 17.5rem;
   height: 17.5rem;
-  padding: 2.5rem 3rem;
+  padding: 2.5rem 3.5rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 

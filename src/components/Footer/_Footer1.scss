@@ -1,0 +1,24 @@
+@use "../../styles/variables" as v;
+
+.footer1__container {
+  display: grid;
+  row-gap: 2.5rem;
+  text-align: center;
+  margin: 2.5rem 1.5rem;
+  & img {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .footer1__description {
+    display: grid;
+    row-gap: 2rem;
+
+    & h4 {
+      text-transform: uppercase;
+      & span {
+        color: v.$accentColor;
+      }
+    }
+  }
+}

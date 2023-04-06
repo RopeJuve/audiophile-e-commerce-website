@@ -4,43 +4,5 @@
   margin: 0 1.5rem;
   text-align: center;
   color: v.$primaryColor;
-
-  &-speaker-zx7 {
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-    height: 20rem;
-    text-align: left;
-    padding-left: 1.5rem;
-    gap: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    border-radius: 0.5rem;
-    background-color: rgba($color: #000000, $alpha: 0.1);
-    & img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-
-    & h4 {
-      color: v.$secondaryColor;
-    }
-
-    & button {
-      margin-left: 0;
-      color: v.$secondaryColor;
-      background-color: transparent;
-      outline: 1px solid v.$secondaryColor;
-      transition: all 0.5s ease-in-out;
-      &:hover {
-        color: v.$primaryColor;
-        background-color: v.$secondaryColor;
-      }
-    }
-  }
+  overflow: hidden;
 }

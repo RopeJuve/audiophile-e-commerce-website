@@ -15,8 +15,12 @@ const NavBar = () => {
       </div>
       <div
         className={
-          openMenu ? "nav-bar__container-menu open" : "nav-bar__container-menu"
+          openMenu
+            ? "nav-bar__container-menu open"
+            : "nav-bar__container-menu "
         }
+
+        data-close-menu={!openMenu}
       >
         <Carts />
       </div>
