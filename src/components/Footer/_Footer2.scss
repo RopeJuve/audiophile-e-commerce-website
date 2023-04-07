@@ -1,0 +1,23 @@
+@use '../../styles/variables' as v;
+
+.footer2__container{
+    background-color: v.$secondaryColor;
+    text-align: center;
+    display: grid;
+    row-gap: 2.5rem;
+    padding: 2.5rem 1.5rem;
+    & h6 {
+        position: relative;
+        color: v.$primaryColor;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 30%;
+            height: 4px;
+            background-color: v.$accentColor;
+            top: -2.5rem;
+            left: 35%;
+            z-index: 1;
+        }
+    }
+}
