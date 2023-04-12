@@ -1,10 +1,9 @@
 import "./_Footer1.scss";
-import img from "../../assets/shared/mobile/image-best-gear.jpg";
 
 const Footer1 = () => {
   return (
     <div className="footer1__container">
-      <img src={img} alt="" />
+      <img src="./assets/shared/mobile/image-best-gear.jpg" alt="" />
       <div className="footer1__description">
         <h4>
           Bringing you the <span>best</span> audio gear

@@ -1,23 +1,34 @@
-@use '../../styles/variables' as v;
+@use "../../styles/variables" as v;
 
-.footer2__container{
-    background-color: v.$secondaryColor;
-    text-align: center;
-    display: grid;
-    row-gap: 2.5rem;
-    padding: 2.5rem 1.5rem;
-    & h6 {
-        position: relative;
-        color: v.$primaryColor;
-        &::after{
-            content: '';
-            position: absolute;
-            width: 30%;
-            height: 4px;
-            background-color: v.$accentColor;
-            top: -2.5rem;
-            left: 35%;
-            z-index: 1;
-        }
+.footer2__container {
+  background-color: v.$secondaryColor;
+  text-align: center;
+  display: grid;
+  row-gap: 2.5rem;
+  padding: 2.5rem 1.5rem;
+  & h6 {
+    position: relative;
+    color: v.$primaryColor;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30%;
+      height: 4px;
+      background-color: v.$accentColor;
+      top: -2.5rem;
+      left: 35%;
+      z-index: 1;
     }
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    & img {
+      cursor: pointer;
+    }
+  }
 }

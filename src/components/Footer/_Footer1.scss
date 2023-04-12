@@ -20,5 +20,8 @@
         color: v.$accentColor;
       }
     }
+    & p {
+      color: v.$secondaryColor;
+    }
   }
 }

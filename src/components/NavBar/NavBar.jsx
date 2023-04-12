@@ -1,6 +1,5 @@
 import "./_NavBar.scss";
-import menu from "../../assets/icon-menu.png";
-import cart from "../../assets/icon-cart.png";
+
 import { useState } from "react";
 import Carts from "../Carts/Carts";
 
@@ -9,9 +8,9 @@ const NavBar = () => {
   return (
     <div className="nav-bar__container">
       <div className="nav-bar__container-navLinks-wrapper">
-        <img src={menu} alt="menu" onClick={() => setOpenMenu(!openMenu)} />
+        <img src='./assets/icon-menu.png' alt="menu" onClick={() => setOpenMenu(!openMenu)} />
         <h6>audiophile</h6>
-        <img src={cart} alt="cart" />
+        <img src='./assets/icon-cart.png' alt="cart" />
       </div>
       <div
         className={

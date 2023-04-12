@@ -1,5 +1,5 @@
 import "./_Cart.scss";
-import path from "../../assets/icon-path.png";
+
 
 const Cart = ({ src, title }) => {
   return (
@@ -9,8 +9,8 @@ const Cart = ({ src, title }) => {
         <div className="shadow"></div>
         <h6>{title}</h6>
         <div className="shop-btn">
-          <a href="/">shop</a>
-          <img src={path} alt="icon" />
+          <a href={`/${title}`}>shop</a>
+          <img src='./assets/icon-path.png' alt="icon" />
         </div>
       </div>
     </div>

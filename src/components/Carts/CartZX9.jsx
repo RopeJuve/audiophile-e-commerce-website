@@ -1,11 +1,11 @@
 import "./_CartZX9.scss";
-import speakerZx9 from "../../assets/home/mobile/image-speaker-zx9.png";
+
 
 const CartZX9 = () => {
   return (
     <div className="cartZX9__container-speaker-zx9">
       <div className="cartZX9__container-img-wrapper">
-        <img src={speakerZx9} alt="" />
+        <img src='./assets/home/mobile/image-speaker-zx9.png' alt="" />
       </div>
       <h2>ZX9 SPEAKER</h2>
       <p>

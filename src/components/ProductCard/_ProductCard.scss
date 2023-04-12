@@ -1,0 +1,50 @@
+@use "../../styles/variables" as v;
+.product-card__container{
+    padding: 4rem 1.5rem;
+
+    .product-card__wrapper{
+        display: grid;
+        row-gap: 2rem;
+
+        & img{
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+    }
+
+    .card-content{
+        text-align: center;
+        display: grid;
+        row-gap: 1.5rem;
+
+        & h6 {
+            font-size: v.$fsOverline;
+            font-weight: 400;
+            line-height: v.$lSpaceOverline;
+            letter-spacing: v.$chSpaceOverline;
+            color: v.$accentColor;
+            text-transform: uppercase;
+          }
+
+        & h4{
+            max-width: 13ch;
+            margin: 0 auto;
+        }
+
+        & p{
+            color: black;
+        }
+
+        & button{
+            color: v.$primaryColor;
+            background-color: v.$accentColor;
+            transition: all 0.3s ease-in-out;
+        }
+
+        & button:hover{
+            color: v.$accentColor;
+            background-color: v.$primaryColor;
+            outline: 1px solid v.$accentColor;
+        }
+    }
+}
