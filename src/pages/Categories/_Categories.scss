@@ -1,0 +1,11 @@
+@use "../../styles/variables" as v;
+
+.heading{
+    background-color: v.$secondaryColor;
+    padding: 2rem 0;
+    & h4{
+        text-align: center;
+        text-transform: uppercase;
+        color: v.$primaryColor;
+    }
+}
