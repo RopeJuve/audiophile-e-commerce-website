@@ -16,7 +16,7 @@ function App() {
       <Route path="/speakers" element={<Categories category="speakers" />} />
       <Route path="/earphones" element={<Categories category="earphones" />} />
       {slugs.map((prod) => (
-        <Route path={`/${prod}`} element={<ProductDescription />} />
+        <Route key={prod}  path={`/${prod}`} element={<ProductDescription key={prod} />} />
       ))}
     </Routes>
   );

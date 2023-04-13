@@ -1,0 +1,39 @@
+@use "../../styles/variables" as v;
+
+.others__container{
+    padding: 7.5rem 1.5rem;
+    text-align: center;
+
+    & h6{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-bottom: 2.8rem;
+    }
+}
+
+.product-cart__container{
+    display: grid;
+    row-gap: 2rem;
+    margin-bottom: 3.5rem;
+    & img {
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+
+    & h6{
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    & button {
+        color: v.$primaryColor;
+        background-color: v.$accentColor;
+        transition: all 0.3s ease-in-out;
+      }
+  
+      & button:hover {
+        color: v.$accentColor;
+        background-color: v.$primaryColor;
+        outline: 1px solid v.$accentColor;
+      }
+}
