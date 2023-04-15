@@ -39,14 +39,5 @@
       color: v.$primaryColor;
       margin-bottom: 1.5rem;
     }
-
-    & button {
-      transition: all 0.3s ease-in-out;
-      color: v.$primaryColor;
-      background-color: v.$accentColor;
-      &:hover {
-        background-color: v.$buttonHover;
-      }
-    }
   }
 }

@@ -1,0 +1,56 @@
+@use "../../styles/variables" as v;
+.btn {
+  display: inline-block;
+  margin: 0 auto;
+  border: none;
+  font-weight: 700;
+  padding: 0.75rem 2.2rem;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &.primary {
+    background-color: v.$accentColor;
+    color: v.$primaryColor;
+
+    &:hover {
+      background-color: v.$buttonHover;
+    }
+  }
+
+  &.secondary {
+    background-color: v.$secondaryColor;
+    color: v.$primaryColor;
+
+    &:hover {
+      background-color: v.$primaryColor;
+      color: v.$secondaryColor;
+      outline: 1px solid v.$secondaryColor;
+    }
+  }
+
+  &.transparent {
+    outline: 1px solid v.$secondaryColor;
+    background-color: transparent;
+    color: v.$secondaryColor;
+    margin-left: 0;
+
+    &:hover {
+      background-color: v.$secondaryColor;
+      color: v.$primaryColor;
+    }
+  }
+
+  &.outline{
+    & img{
+        transform: translateY(0);
+        margin-left: 0.7rem;
+    }
+
+    
+    &:hover {
+        color: v.$accentColor;
+      }
+  }
+}

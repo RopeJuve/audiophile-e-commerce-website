@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+
 import Carts from "../../components/Carts/Carts";
 import Features from "../../components/Features/Features";
 import Gallery from "../../components/Gallery/Gallery";
@@ -20,6 +21,7 @@ const ProductDescription = () => {
         name={product.name}
         isNew={product.new}
         description={product.description}
+        price={product.price}
       />
       <Features features={product.features} />
       <InBox box={product.includes} />

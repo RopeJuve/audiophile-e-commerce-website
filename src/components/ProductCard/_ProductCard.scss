@@ -35,19 +35,6 @@
     & p {
       color: black;
     }
-
-    & button {
-      color: v.$primaryColor;
-      background-color: v.$accentColor;
-      transition: all 0.3s ease-in-out;
-    }
-
-    & button:hover {
-      color: v.$accentColor;
-      background-color: v.$primaryColor;
-      outline: 1px solid v.$accentColor;
-    }
-
     &.description {
       text-align: left;
 

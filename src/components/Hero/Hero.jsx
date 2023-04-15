@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import "./_Hero.scss";
 
 
@@ -12,7 +13,7 @@ const Hero = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <button>See Product</button>
+        <Button variant='primary'>See Product</Button>
       </div>
     </div>
   );

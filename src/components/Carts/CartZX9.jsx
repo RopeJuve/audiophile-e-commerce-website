@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import "./_CartZX9.scss";
 
 
@@ -12,7 +13,7 @@ const CartZX9 = () => {
         Upgrade to premium speakers that are phenomenally built to deliver truly
         remarkable sound.
       </p>
-      <button>see product</button>
+      <Button variant='secondary'>see product</Button>
     </div>
   );
 };

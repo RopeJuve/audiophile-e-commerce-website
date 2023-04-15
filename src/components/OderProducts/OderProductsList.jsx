@@ -1,5 +1,6 @@
 import "./_OderProductsList.scss";
 import { useNavigate } from "react-router-dom";
+import Button from "../Button/Button";
 
 const ProductCart = ({ imgUrl, title, slug }) => {
   const navigate = useNavigate();
@@ -7,7 +8,7 @@ const ProductCart = ({ imgUrl, title, slug }) => {
     <div className="product-cart__container">
       <img src={imgUrl} alt={slug} />
       <h6>{title}</h6>
-      <button onClick={() => navigate(`/${slug}`)}>See Product</button>
+      <Button variant='primary' onClick={() => navigate(`/${slug}`)}>See Product</Button>
     </div>
   );
 };

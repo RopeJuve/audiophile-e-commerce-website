@@ -17,17 +17,6 @@
     margin-bottom: 1.5rem;
   }
 
-  & button {
-    font-weight: 700;
-    background-color: v.$secondaryColor;
-    color: v.$primaryColor;
-    transition: all 0.5s ease-in-out;
-    &:hover {
-      background-color: v.$primaryColor;
-      color: v.$secondaryColor;
-      outline: 1px solid v.$secondaryColor;
-    }
-  }
 }
 .cartZX9__container-img-wrapper {
   position: relative;
