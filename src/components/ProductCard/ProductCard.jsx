@@ -4,7 +4,15 @@ import classNames from "classnames";
 import Button from "../Button/Button";
 import AddToCart from "../AddToCart/AddToCart";
 
-const ProductCard = ({ variant, imgUrl, isNew, name, description, slug, price}) => {
+const ProductCard = ({
+  variant,
+  imgUrl,
+  isNew,
+  name,
+  description,
+  slug,
+  price,
+}) => {
   const navigate = useNavigate();
 
   const contentClass = classNames({
@@ -21,7 +29,9 @@ const ProductCard = ({ variant, imgUrl, isNew, name, description, slug, price}) 
           <h4>{name}</h4>
           <p>{description}</p>
           {variant === "category" ? (
-            <Button variant='primary' onClick={() => navigate(`/${slug}`)}>SEE Product</Button>
+            <Button variant="primary" onClick={() => navigate(`/${slug}`)}>
+              SEE Product
+            </Button>
           ) : (
             <AddToCart price={price} />
           )}

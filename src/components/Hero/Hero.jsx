@@ -1,11 +1,16 @@
 import Button from "../Button/Button";
 import "./_Hero.scss";
+import { useMediaQuery } from 'react-responsive'
 
 
 const Hero = () => {
+  const isTablet = useMediaQuery({
+    query: '(min-width: 48em)'
+  })
   return (
     <div className="hero__container">
-      <img src='./assets/home/mobile/image-header.jpg' alt="hero img" />
+      {isTablet && <img src='./assets/home/tablet/image-header.jpg' alt="hero img" />}
+      {/* <img src='./assets/home/mobile/image-header.jpg' alt="hero img" /> */}
       <div className="hero__container-prod-content">
         <div className="overline">new Product</div>
         <h2>xx99 mark ii headphones</h2>

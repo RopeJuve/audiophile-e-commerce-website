@@ -8,7 +8,9 @@ const ProductCart = ({ imgUrl, title, slug }) => {
     <div className="product-cart__container">
       <img src={imgUrl} alt={slug} />
       <h6>{title}</h6>
-      <Button variant='primary' onClick={() => navigate(`/${slug}`)}>See Product</Button>
+      <Button variant="primary" onClick={() => navigate(`/${slug}`)}>
+        See Product
+      </Button>
     </div>
   );
 };

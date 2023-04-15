@@ -22,4 +22,10 @@
       margin-bottom: 2.5rem;
     }
   }
+
+  @media screen and (min-width: 48em) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0.625rem;
+  }
 }

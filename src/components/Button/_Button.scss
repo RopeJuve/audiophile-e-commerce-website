@@ -42,15 +42,14 @@
     }
   }
 
-  &.outline{
-    & img{
-        transform: translateY(0);
-        margin-left: 0.7rem;
+  &.outline {
+    & img {
+      transform: translateY(0);
+      margin-left: 0.7rem;
     }
 
-    
     &:hover {
-        color: v.$accentColor;
-      }
+      color: v.$accentColor;
+    }
   }
 }

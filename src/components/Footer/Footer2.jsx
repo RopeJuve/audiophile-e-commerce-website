@@ -1,10 +1,11 @@
+import NavLinks from "../NavBar/NavLinks";
 import "./_Footer2.scss";
-
 
 const Footer2 = () => {
   return (
     <div className="footer2__container">
       <h6>audiophile</h6>
+      <NavLinks variant="footer" />
       <p>
         Audiophile is an all in one stop to fulfill your audio needs. We're a
         small team of music lovers and sound specialists who are devoted to
@@ -13,9 +14,9 @@ const Footer2 = () => {
       </p>
       <p>Copyright 2021. All Rights Reserved</p>
       <div className="social-media">
-        <img src='./assets/facebook.svg' alt="" />
-        <img src='./assets/tweeter.svg' alt="" />
-        <img src='./assets/instagram.svg' alt="" />
+        <img src="./assets/facebook.svg" alt="" />
+        <img src="./assets/tweeter.svg" alt="" />
+        <img src="./assets/instagram.svg" alt="" />
       </div>
     </div>
   );

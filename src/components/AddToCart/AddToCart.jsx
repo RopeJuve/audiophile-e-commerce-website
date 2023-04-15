@@ -1,4 +1,4 @@
-import './_AddToCart.scss'
+import "./_AddToCart.scss";
 import Button from "../Button/Button";
 
 const AddToCart = ({ price }) => {
@@ -6,12 +6,12 @@ const AddToCart = ({ price }) => {
     <>
       <div className="price">$ {price}</div>
       <div className="add-to-cart-btn">
-        <div className='inputs'>
-            <p>-</p>
-            <p>1</p>
-            <p>+</p>
+        <div className="inputs">
+          <p>-</p>
+          <p>1</p>
+          <p>+</p>
         </div>
-        <Button variant='primary'>Add To Cart</Button>
+        <Button variant="primary">Add To Cart</Button>
       </div>
     </>
   );
