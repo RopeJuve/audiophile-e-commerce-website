@@ -1,9 +1,19 @@
+import { useMediaQuery } from "react-responsive";
 import "./_Footer1.scss";
 
 const Footer1 = () => {
+  const isMobile = useMediaQuery({
+    query: "(max-width: 47em)",
+  });
+  const isTablet = useMediaQuery({
+    query: "(min-width: 48em)",
+  });
   return (
     <div className="footer1__container">
-      <img src="./assets/shared/mobile/image-best-gear.jpg" alt="" />
+      {isTablet && (
+        <img src="./assets/shared/tablet/image-best-gear.jpg" alt="" />
+      )}
+       {isMobile && <img src="./assets/shared/mobile/image-best-gear.jpg" alt="" />}
       <div className="footer1__description">
         <h4>
           Bringing you the <span>best</span> audio gear

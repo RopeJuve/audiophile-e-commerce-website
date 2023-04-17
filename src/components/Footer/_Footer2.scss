@@ -22,6 +22,7 @@
   }
 
   .social-media {
+    margin-top: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +30,26 @@
 
     & img {
       cursor: pointer;
+    }
+  }
+
+  @media screen and (min-width: 48em) {
+    text-align: left;
+
+    & h6 {
+      &::after {
+        width: 12%;
+        left: 0;
+        z-index: 1;
+      }
+    }
+    .footer-text {
+      width: 95%;
+    }
+    .social__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 }

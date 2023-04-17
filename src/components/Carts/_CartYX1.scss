@@ -27,5 +27,11 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0.625rem;
+
+    .cartYX1__wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
