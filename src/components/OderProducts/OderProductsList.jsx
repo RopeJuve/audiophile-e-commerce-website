@@ -22,7 +22,7 @@ const OderProductsList = ({ others }) => {
       {others.map((product, index) => (
         <ProductCart
           key={index}
-          imgUrl={product.image.mobile}
+          imgUrl={product.image.tablet}
           title={product.name}
           slug={product.slug}
         />

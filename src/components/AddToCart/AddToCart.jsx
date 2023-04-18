@@ -11,7 +11,7 @@ const AddToCart = ({ price }) => {
           <p>1</p>
           <p>+</p>
         </div>
-        <Button variant="primary">Add To Cart</Button>
+        <Button variant="addToCart">Add To Cart</Button>
       </div>
     </>
   );

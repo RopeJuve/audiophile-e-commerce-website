@@ -7,6 +7,7 @@ const Button = ({ variant, children, ...props }) => {
     secondary: variant === "secondary",
     transparent: variant === "transparent",
     outline: variant === "outline",
+    "primary add-to-cart": variant === "addToCart",
   });
   return (
     <div className={btnClasses} {...props}>

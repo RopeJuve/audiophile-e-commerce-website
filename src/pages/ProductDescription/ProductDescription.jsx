@@ -17,7 +17,7 @@ const ProductDescription = () => {
     <Layout>
       <ProductCard
         variant="description"
-        imgUrl={product.image.mobile}
+        imgUrl={product.image.tablet}
         name={product.name}
         isNew={product.new}
         description={product.description}

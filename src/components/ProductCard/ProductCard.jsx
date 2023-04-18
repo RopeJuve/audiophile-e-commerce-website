@@ -19,10 +19,15 @@ const ProductCard = ({
     "card-content": variant === "category",
     "card-content description": variant === "description",
   });
+
+  const wrapperClass = classNames({
+    "product-card__wrapper": variant === "category",
+    "product-card__wrapper description-wrapper": variant === "description",
+  });
   /*  variant === "category" ? "card-content" : "card-content description"; */
   return (
     <div className="product-card__container">
-      <div className="product-card__wrapper">
+      <div className={wrapperClass}>
         <img src={imgUrl} alt="" />
         <div className={contentClass}>
           {isNew ? <h6>NEW PRODUCT</h6> : ""}
