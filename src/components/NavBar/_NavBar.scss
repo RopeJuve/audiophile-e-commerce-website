@@ -11,6 +11,8 @@
     justify-content: space-between;
     align-items: center;
     color: v.$primaryColor;
+    max-width: 68.75rem;
+    margin-inline: auto;
 
     & img {
       cursor: pointer;

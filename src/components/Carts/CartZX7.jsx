@@ -4,13 +4,20 @@ import "./_CartZX7.scss";
 
 const CartZX7 = () => {
   const isMobile = useMediaQuery({
-    query: "(max-width: 47em)",
+    query: "(max-width: 48em)",
   });
   const isTablet = useMediaQuery({
-    query: "(min-width: 48em)",
+    query: "(min-width: 48em) and (max-width: 62em)",
+  });
+
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 62.5em)",
   });
   return (
     <div className="cartZX7__container-speaker-zx7">
+      {isDesktop && (
+        <img src="./assets/home/desktop/image-speaker-zx7.jpg" alt=""></img>
+      )}
       {isTablet && (
         <img src="./assets/home/tablet/image-speaker-zx7.jpg" alt=""></img>
       )}

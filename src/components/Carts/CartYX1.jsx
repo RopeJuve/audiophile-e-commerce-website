@@ -4,13 +4,20 @@ import "./_CartYX1.scss";
 
 const CartYX1 = () => {
   const isMobile = useMediaQuery({
-    query: "(max-width: 47em)",
+    query: "(max-width: 48em)",
   });
   const isTablet = useMediaQuery({
-    query: "(min-width: 48em)",
+    query: "(min-width: 48em) and (max-width: 62em)",
+  });
+
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 62.5em)",
   });
   return (
     <div className="cartYX1__container">
+      {isDesktop && (
+        <img src="./assets/home/desktop/image-earphones-yx1.jpg" alt="" />
+      )}
       {isTablet && (
         <img src="./assets/home/tablet/image-earphones-yx1.jpg" alt="" />
       )}

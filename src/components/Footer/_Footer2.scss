@@ -3,53 +3,80 @@
 .footer2__container {
   background-color: v.$secondaryColor;
   text-align: center;
-  display: grid;
-  row-gap: 2.5rem;
-  padding: 2.5rem 1.5rem;
-  & h6 {
-    position: relative;
-    color: v.$primaryColor;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 30%;
-      height: 4px;
-      background-color: v.$accentColor;
-      top: -2.5rem;
-      left: 35%;
-      z-index: 1;
-    }
-  }
 
-  .social-media {
-    margin-top: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
-    & img {
-      cursor: pointer;
-    }
-  }
-
-  @media screen and (min-width: 48em) {
-    text-align: left;
-
+  .footer2__wrapper {
+    display: grid;
+    row-gap: 2.5rem;
+    padding: 2.5rem 1.5rem;
+    max-width: 68.75rem;
+    margin-inline: auto;
     & h6 {
+      position: relative;
+      color: v.$primaryColor;
       &::after {
-        width: 12%;
-        left: 0;
+        content: "";
+        position: absolute;
+        width: 30%;
+        height: 4px;
+        background-color: v.$accentColor;
+        top: -2.5rem;
+        left: 35%;
         z-index: 1;
       }
     }
-    .footer-text {
-      width: 95%;
-    }
-    .social__wrapper {
+
+    .social-media {
+      margin-top: 2.5rem;
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: space-between;
+      gap: 1rem;
+
+      & img {
+        cursor: pointer;
+      }
+
+      @media screen and (min-width: 62.5em) {
+        margin-top: 0;
+      }
+    }
+
+    @media screen and (min-width: 48em) {
+      text-align: left;
+
+      & h6 {
+        &::after {
+          width: 12%;
+          left: 0;
+          z-index: 1;
+        }
+      }
+      .footer-text {
+        width: 95%;
+        @media screen and (min-width: 62.5em) {
+          grid-row: 2/3;
+          grid-column: 1/2;
+        }
+      }
+      .social__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (min-width: 62.5em) {
+          grid-row: 3/4;
+          grid-column: 4/1;
+        }
+      }
+    }
+
+    @media screen and (min-width: 62.5em) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 0;
+      & h6 {
+        align-self: center;
+      }
     }
   }
 }

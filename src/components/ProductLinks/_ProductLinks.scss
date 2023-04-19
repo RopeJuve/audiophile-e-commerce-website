@@ -5,4 +5,9 @@
   text-align: center;
   color: v.$primaryColor;
   overflow: hidden;
+  max-width: 68.75rem;
+
+  @media screen and (min-width: 62.5em) {
+       margin-inline: auto;
+  }
 }

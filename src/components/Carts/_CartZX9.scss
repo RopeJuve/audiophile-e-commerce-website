@@ -18,7 +18,15 @@
     max-width: 21.87rem;
   }
 
- 
+  @media screen and (min-width: 62.5rem) {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    text-align: left;
+    padding: 7.75rem 1.5rem;
+    & h2, p{
+      margin-left: 0;
+    }
+  }
 
 }
 .cartZX9__container-img-wrapper {
@@ -55,4 +63,11 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 50%;
   }
+  @media screen and (min-width: 62.5rem){
+    grid-row: 1/4;
+    & img{
+      transform: scale(2) translateY(2.3rem);
+    }
+  }
+  
 }

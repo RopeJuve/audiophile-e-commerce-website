@@ -7,10 +7,17 @@ const Hero = () => {
     query: "(max-width: 48em)",
   });
   const isTablet = useMediaQuery({
-    query: "(min-width: 48em)",
+    query: "(min-width: 48em) and (max-width: 62em)",
   });
+
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 62.5rem)'
+  })
   return (
     <div className="hero__container">
+      {isDesktop && (
+        <img src="./assets/home/desktop/image-hero.jpg" alt="hero img" />
+      )}
       {isTablet && (
         <img src="./assets/home/tablet/image-header.jpg" alt="hero img" />
       )}
@@ -24,7 +31,7 @@ const Hero = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <Button variant="primary">See Product</Button>
+        <Button variant={isDesktop ? 'addToCart' : 'primary'}>See Product</Button>
       </div>
     </div>
   );

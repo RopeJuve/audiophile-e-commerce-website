@@ -28,6 +28,11 @@
       color: v.$secondaryColor;
       outline: 1px solid v.$secondaryColor;
     }
+
+    @media screen and (min-width: 62.5rem){
+      align-self: center;
+      margin-left: 0;
+    }
   }
 
   &.transparent {
