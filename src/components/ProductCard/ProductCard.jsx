@@ -4,6 +4,8 @@ import classNames from "classnames";
 import Button from "../Button/Button";
 import AddToCart from "../AddToCart/AddToCart";
 
+
+
 const ProductCard = ({
   variant,
   imgUrl,
@@ -12,6 +14,7 @@ const ProductCard = ({
   description,
   slug,
   price,
+  desktop
 }) => {
   const navigate = useNavigate();
 
@@ -23,6 +26,8 @@ const ProductCard = ({
   const wrapperClass = classNames({
     "product-card__wrapper": variant === "category",
     "product-card__wrapper description-wrapper": variant === "description",
+    "product-card__wrapper v-1": desktop === "1",
+    "product-card__wrapper v-2": desktop === "2"
   });
   /*  variant === "category" ? "card-content" : "card-content description"; */
   return (

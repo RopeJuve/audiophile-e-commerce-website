@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
 import "./_Hero.scss";
 import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const isMobile = useMediaQuery({
     query: "(max-width: 48em)",
   });
@@ -31,7 +33,8 @@ const Hero = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <Button variant={isDesktop ? 'addToCart' : 'primary'}>See Product</Button>
+        <Button variant={isDesktop ? 'addToCart' : 'primary'} onClick={() => navigate('/xx99-mark-two-headphones')
+        }>See Product</Button>
       </div>
     </div>
   );

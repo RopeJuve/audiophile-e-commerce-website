@@ -11,25 +11,30 @@ const Categories = ({ category }) => {
     .reverse();
 
   const isTablet = useMediaQuery({
-    query: "(min-width: 48em)",
+    query: "(min-width: 48em) and (max-width: 62em)",
   });
+
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 62.5rem)'
+  })
 
   return (
     <Layout>
       <div className="heading">
         <h4>{category}</h4>
       </div>
-      {products.map((prod) => (
+      {products.map((prod, i) => (
         <ProductCard
           key={prod.id}
-          variant="category"
+          variant='category'
           imgUrl={
-            isTablet ? prod.categoryImage.tablet : prod.categoryImage.mobile
+            isDesktop ? prod.categoryImage.desktop : isTablet ? prod.categoryImage.tablet : prod.categoryImage.mobile
           }
           isNew={prod.new}
           name={prod.name}
           description={prod.description}
           slug={prod.slug}
+          desktop={(i + 1) % 2 === 0 ? '2' : '1'}
         />
       ))}
       <Carts />

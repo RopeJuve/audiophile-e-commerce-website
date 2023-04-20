@@ -1,0 +1,10 @@
+.product-features{
+    @media screen and (min-width: 62.5em) {
+        padding: 7.5rem 0;
+        max-width: 68.75rem;
+        margin-inline: auto;
+        display: grid;
+        gap: 7.8rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

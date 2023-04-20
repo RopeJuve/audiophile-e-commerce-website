@@ -2,7 +2,8 @@
 
 .in-box__container {
   padding: 4rem clamp(1.5rem, 5vw, 3rem) 5.5rem clamp(1.5rem, 5vw, 3rem);
-
+  max-width: 68.75rem;
+  margin-inline: auto;
   & h6 {
     font-size: clamp(1.5rem, 5vw, 2rem);
     text-transform: uppercase;
@@ -17,6 +18,12 @@
     & h6 {
       grid-row: 1/6;
     }
+  }
+
+  @media screen and (min-width: 62.5rem) {
+    grid-template-columns: 1fr;
+    align-self: start;
+    padding: 0;
   }
 }
 

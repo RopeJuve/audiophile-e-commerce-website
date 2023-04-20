@@ -1,5 +1,7 @@
 .features__container {
   padding: clamp(1.5rem, 5vw, 3rem);
+  max-width: 68.75rem;
+  margin-inline: auto;
 
   & h6 {
     font-size: clamp(1.5rem, 5vw, 2rem);
@@ -10,5 +12,9 @@
   & p {
     color: black;
     white-space: pre-line;
+  }
+
+  @media screen and (min-width: 62.5rem) {
+    padding: 0;
   }
 }

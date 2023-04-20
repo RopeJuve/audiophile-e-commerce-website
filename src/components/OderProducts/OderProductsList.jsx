@@ -1,6 +1,7 @@
 import "./_OderProductsList.scss";
 import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
+import { useMediaQuery } from "react-responsive";
 
 const ProductCart = ({ imgUrl, title, slug }) => {
   const navigate = useNavigate();
@@ -16,13 +17,21 @@ const ProductCart = ({ imgUrl, title, slug }) => {
 };
 
 const OderProductsList = ({ others }) => {
+
+  const isTablet = useMediaQuery({
+    query: "(min-width: 48em) and (max-width: 62em)",
+  });
+
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 62.5rem)'
+  })
   return (
     <div className="others__container">
       <h6>you may also like</h6>
       {others.map((product, index) => (
         <ProductCart
           key={index}
-          imgUrl={product.image.tablet}
+          imgUrl={isDesktop ? product.image.desktop : isTablet ? product.image.tablet : product.image.mobile}
           title={product.name}
           slug={product.slug}
         />
