@@ -10,10 +10,20 @@
     align-items: center;
 }
 
+.op-1{
+    color: black;
+    opacity: 1;
+    font-weight: 700;
+}
+
 .inputs{
     padding:0.75rem 1rem;
     background-color: #F1F1F1;
     display: flex;
     align-items: center;
     gap: 1.5rem;
+
+    &.cart-inputs{
+        padding:0.44rem 0.69rem;
+    }
 }

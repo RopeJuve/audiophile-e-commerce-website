@@ -4,6 +4,7 @@ import { useState } from "react";
 import Carts from "../Carts/Carts";
 import { useMediaQuery } from "react-responsive";
 import NavLinks from "./NavLinks";
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
 
 const NavBar = () => {
 
@@ -18,6 +19,7 @@ const NavBar = () => {
         <h6>audiophile</h6>
         {isDesktop && <NavLinks variant='nav' />}
         <img src='./assets/icon-cart.png' alt="cart" />
+
       </div>
       {!isDesktop && <div
         className={
@@ -29,7 +31,11 @@ const NavBar = () => {
         data-close-menu={!openMenu}
       >
         <Carts />
+
       </div>}
+      <div className="cart-bg">
+        <ShoppingCart />
+      </div>
     </div>
   );
 };

@@ -8,6 +8,9 @@ const Button = ({ variant, children, ...props }) => {
     transparent: variant === "transparent",
     outline: variant === "outline",
     "primary add-to-cart": variant === "addToCart",
+    'primary checkout': variant === 'checkout',
+    'outline remove-all': variant === 'delete',
+    'outline minus-plus': variant === 'minusPlus'
   });
   return (
     <div className={btnClasses} {...props}>

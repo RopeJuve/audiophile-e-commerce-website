@@ -43,7 +43,7 @@ const ProductCard = ({
               SEE Product
             </Button>
           ) : (
-            <AddToCart price={price} />
+            <AddToCart price={price} variant='description'/>
           )}
         </div>
       </div>

@@ -17,6 +17,11 @@
     &:hover {
       background-color: v.$buttonHover;
     }
+
+    &.checkout{
+      text-align: center;
+      margin: 0;
+    }
   }
 
   &.secondary {
@@ -55,6 +60,21 @@
 
     &:hover {
       color: v.$accentColor;
+    }
+
+    &.remove-all{
+      text-transform: none;
+      text-decoration: underline;
+      opacity: 0.5;
+      margin: 0;
+      padding: 0;
+    }
+
+    &.minus-plus{
+      text-transform: none;
+      opacity: 0.5;
+      margin: 0;
+      padding: 0;
     }
   }
 

@@ -1,17 +1,23 @@
 import "./_AddToCart.scss";
+import  classNames from 'classnames'
 import Button from "../Button/Button";
 
-const AddToCart = ({ price }) => {
+const AddToCart = ({ price, variant }) => {
+
+  const inputClasses = classNames({
+    'inputs': variant === 'description',
+    'inputs cart-inputs': variant === 'cart'
+  })
   return (
     <>
-      <div className="price">$ {price}</div>
+      {variant === 'description' && <div className="price">$ {price}</div>}
       <div className="add-to-cart-btn">
-        <div className="inputs">
-          <p>-</p>
-          <p>1</p>
-          <p>+</p>
+        <div className={inputClasses}>
+          <Button variant='minusPlus'>-</Button>
+          <p className="op-1">1</p>
+          <Button variant='minusPlus'>+</Button>
         </div>
-        <Button variant="addToCart">Add To Cart</Button>
+        {variant === 'description' && <Button variant="addToCart">Add To Cart</Button>}
       </div>
     </>
   );
