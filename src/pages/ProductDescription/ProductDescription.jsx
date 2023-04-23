@@ -31,13 +31,16 @@ const ProductDescription = () => {
 
 
   const addCartItem = (quantity) => {
-   
-    setCartItem((prefItems) => [...prefItems, {
+    const newProd = {
       imgUrl: product.image.mobile,
       name: product.name,
       price: product.price,
       quantity
-    }])
+    }
+
+    setCartItem((prefItems) => [...prefItems, newProd])
+
+
   }
   const { pathname } = useLocation();
   const [product] = productData.filter((prod) => `/${prod.slug}` === pathname);

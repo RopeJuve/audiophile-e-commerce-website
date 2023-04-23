@@ -1,10 +1,10 @@
-import "./_AddToCart.scss";
-import  classNames from 'classnames'
-import Button from "../Button/Button";
+import classNames from 'classnames';
 import { useState } from "react";
+import Button from "../Button/Button";
+import "./_AddToCart.scss";
 
-const AddToCart = ({ price, variant, addCartItem}) => {
-  const [value, setValue] = useState(1)
+const AddToCart = ({ price, variant, addCartItem, quantity }) => {
+  const [value, setValue] = useState(quantity * 1)
 
   const inputClasses = classNames({
     'inputs': variant === 'description',
@@ -19,7 +19,7 @@ const AddToCart = ({ price, variant, addCartItem}) => {
           <p className="op-1">{value}</p>
           <Button variant='minusPlus' onClick={() => setValue(value + 1)}>+</Button>
         </div>
-        {variant === 'description' && <Button variant="addToCart" onClick = {() => addCartItem(value)}>Add To Cart</Button>}
+        {variant === 'description' && <Button variant="addToCart" onClick={() => addCartItem(value)}>Add To Cart</Button>}
       </div>
     </>
   );

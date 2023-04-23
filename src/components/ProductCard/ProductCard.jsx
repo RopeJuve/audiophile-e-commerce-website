@@ -33,7 +33,7 @@ const ProductCard = ({
     "product-card__wrapper v-2": desktop === "2"
   });
   /*  variant === "category" ? "card-content" : "card-content description"; */
- 
+
   return (
     <div className="product-card__container">
       <div className={wrapperClass}>
@@ -47,7 +47,7 @@ const ProductCard = ({
               SEE Product
             </Button>
           ) : (
-            <AddToCart price={price} variant='description' addCartItem={addCartItem} />
+            <AddToCart price={price} variant='description' addCartItem={addCartItem} quantity={1} />
           )}
         </div>
       </div>
