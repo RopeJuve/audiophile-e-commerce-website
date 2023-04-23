@@ -4,16 +4,20 @@ import AddToCart from '../AddToCart/AddToCart'
 
 const ShoppingCartItem = ({item}) => (
     <div className='f-row items'>
-        <img src={item.img} alt='' />
+        <img src={item.imgUrl} alt='' />
         <div className='f-col'>
             <h6 className='h-cart'>{item.name}</h6>
-            <p className='cl-black'>{item.price}</p>
+            <p className='cl-black'>$ {item.price}</p>
         </div>
         <AddToCart price='' variant='cart' />
     </div>
 )
 
 const ShoppingCart = () => {
+   
+    const cartItems = JSON.parse(window.localStorage.getItem('cartItems'))
+    let total = cartItems.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0);
+    console.log(cartItems)
     return (
         <div className='shoppingCart__container'>
             <div className='shoppingCart__wrapper'>
@@ -21,25 +25,13 @@ const ShoppingCart = () => {
                     <h6>Cart</h6>
                     <Button variant='delete'>Remove all</Button>
                 </div>
-                <ShoppingCartItem item={{
-                    name: 'XX99 MK II',
-                    price: '$ 2,999',
-                    img: './assets/cart/image-xx99-mark-two-headphones.jpg'
-                }} />
-                <ShoppingCartItem item={{
-                    name: 'XX99 MK II',
-                    price: '$ 2,999',
-                    img: './assets/cart/image-xx99-mark-two-headphones.jpg'
-                }} />
-                <ShoppingCartItem item={{
-                    name: 'XX99 MK II',
-                    price: '$ 2,999',
-                    img: './assets/cart/image-xx99-mark-two-headphones.jpg'
-                }} />
+                {cartItems?.map((item, index) => (
+                    <ShoppingCartItem key={index} item={item}/>
+                ))}
                 <div className='checkout__container'>
                     <div className='f-row'>
                         <p className='cl-black'>Total</p>
-                        <strong>$ 0</strong></div>
+                        <strong>$ {total}</strong></div>
                     <Button variant='checkout'>Checkout</Button>
                 </div>
 

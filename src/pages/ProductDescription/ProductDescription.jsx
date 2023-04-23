@@ -9,8 +9,36 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import { productData } from "../../data";
 import Layout from "../Layout/Layout";
 import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
 
 const ProductDescription = () => {
+  const [cartItem, setCartItem] = useState(JSON.parse(
+    window.localStorage.getItem('cartItems')
+  ) || '[]');
+
+  useEffect(() => {
+    const storage = window.localStorage.getItem('cartItems')
+    const parseStorage = JSON.parse(storage)
+    if (parseStorage !== null) {
+      setCartItem(parseStorage)
+    }
+  }, [])
+
+  useEffect(() => {
+    window.localStorage.setItem('cartItems', JSON.stringify(cartItem))
+  }, [cartItem])
+
+
+
+  const addCartItem = (quantity) => {
+   
+    setCartItem((prefItems) => [...prefItems, {
+      imgUrl: product.image.mobile,
+      name: product.name,
+      price: product.price,
+      quantity
+    }])
+  }
   const { pathname } = useLocation();
   const [product] = productData.filter((prod) => `/${prod.slug}` === pathname);
   const isTablet = useMediaQuery({
@@ -29,6 +57,7 @@ const ProductDescription = () => {
         isNew={product.new}
         description={product.description}
         price={product.price}
+        addCartItem={addCartItem}
       />
       <div className="product-features">
         <Features features={product.features} />

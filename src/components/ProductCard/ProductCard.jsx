@@ -6,6 +6,7 @@ import AddToCart from "../AddToCart/AddToCart";
 
 
 
+
 const ProductCard = ({
   variant,
   imgUrl,
@@ -14,9 +15,11 @@ const ProductCard = ({
   description,
   slug,
   price,
-  desktop
+  desktop,
+  addCartItem
 }) => {
   const navigate = useNavigate();
+
 
   const contentClass = classNames({
     "card-content": variant === "category",
@@ -30,6 +33,7 @@ const ProductCard = ({
     "product-card__wrapper v-2": desktop === "2"
   });
   /*  variant === "category" ? "card-content" : "card-content description"; */
+ 
   return (
     <div className="product-card__container">
       <div className={wrapperClass}>
@@ -43,7 +47,7 @@ const ProductCard = ({
               SEE Product
             </Button>
           ) : (
-            <AddToCart price={price} variant='description'/>
+            <AddToCart price={price} variant='description' addCartItem={addCartItem} />
           )}
         </div>
       </div>
