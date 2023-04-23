@@ -20,6 +20,9 @@ const ShoppingCartItem = ({ item }) => {
 
 const ShoppingCart = () => {
 
+    const cartItems = JSON.parse(window.localStorage.getItem('cartItems'))
+
+   
     let total = cartItems.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0);
 
     return (
@@ -27,7 +30,7 @@ const ShoppingCart = () => {
             <div className='shoppingCart__wrapper'>
                 <div className='f-row'>
                     <h6>Cart</h6>
-                    <Button variant='delete' onClick={() => window.localStorage.setItem('cartItems', '[]')}>Remove all</Button>
+                    <Button variant='delete' onClick = { () => window.localStorage.setItem('cartItems', '[]')}>Remove all</Button>
                 </div>
                 {cartItems?.map((item, index) => (
                     <ShoppingCartItem key={index} item={item} />
