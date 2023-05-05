@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import './_ProductDescription.scss'
+import "./_ProductDescription.scss";
 import Carts from "../../components/Carts/Carts";
 import Features from "../../components/Features/Features";
 import Gallery from "../../components/Gallery/Gallery";
@@ -9,39 +9,22 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import { productData } from "../../data";
 import Layout from "../Layout/Layout";
 import { useMediaQuery } from "react-responsive";
-import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../app/cart/cartSlice";
 
 const ProductDescription = () => {
-  const [cartItem, setCartItem] = useState(JSON.parse(
-    window.localStorage.getItem('cartItems')
-  ) || '[]');
-
-  useEffect(() => {
-    const storage = window.localStorage.getItem('cartItems')
-    const parseStorage = JSON.parse(storage)
-    if (parseStorage !== null) {
-      setCartItem(parseStorage)
-    }
-  }, [])
-
-  useEffect(() => {
-    window.localStorage.setItem('cartItems', JSON.stringify(cartItem))
-  }, [cartItem])
-
-
+  const dispatch = useDispatch();
 
   const addCartItem = (quantity) => {
     const newProd = {
       imgUrl: product.image.mobile,
       name: product.name,
       price: product.price,
-      quantity
-    }
+      quantity,
+    };
+    dispatch(addToCart(newProd));
+  };
 
-    setCartItem((prefItems) => [...prefItems, newProd])
-
-
-  }
   const { pathname } = useLocation();
   const [product] = productData.filter((prod) => `/${prod.slug}` === pathname);
   const isTablet = useMediaQuery({
@@ -49,13 +32,19 @@ const ProductDescription = () => {
   });
 
   const isDesktop = useMediaQuery({
-    query: '(min-width: 62.5rem)'
-  })
+    query: "(min-width: 62.5rem)",
+  });
   return (
     <Layout>
       <ProductCard
         variant="description"
-        imgUrl={isDesktop ? product.image.desktop : isTablet ? product.image.tablet : product.image.mobile}
+        imgUrl={
+          isDesktop
+            ? product.image.desktop
+            : isTablet
+            ? product.image.tablet
+            : product.image.mobile
+        }
         name={product.name}
         isNew={product.new}
         description={product.description}
