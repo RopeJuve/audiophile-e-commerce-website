@@ -15,7 +15,7 @@ const NavLinks = ({ variant }) => {
   return (
     <div className={linksClass}>
       {links.map((link, i) => (
-        <button key={`${link}${i}`} onClick={() => navigate(`/${link}`)}>
+        <button key={`${link}${i}`} onClick={() => navigate(link === "home" ? `/` : `/${link}`)}>
           {link}
         </button>
       ))}
