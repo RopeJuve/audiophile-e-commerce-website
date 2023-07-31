@@ -1,8 +1,10 @@
 import { useMediaQuery } from "react-responsive";
 import Button from "../Button/Button";
 import "./_CartZX7.scss";
+import { useNavigate } from "react-router-dom";
 
 const CartZX7 = () => {
+  const navigate = useNavigate();
   const isMobile = useMediaQuery({
     query: "(max-width: 48em)",
   });
@@ -25,7 +27,7 @@ const CartZX7 = () => {
         <img src="./assets/home/mobile/image-speaker-zx7.jpg" alt=""></img>
       )}
       <h4>ZX7 SPEAKER</h4>
-      <Button variant="transparent">see product</Button>
+      <Button variant="transparent"  onClick={() => navigate('/zx7-speaker')}>see product</Button>
     </div>
   );
 };

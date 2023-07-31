@@ -9,7 +9,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
     justify-self: end;
   }
 
@@ -21,5 +20,11 @@
     &:hover{
         color: v.$accentColor;
     }
+  }
+
+  & button{
+    width: 7rem;
+    background-color: rgb(16, 16, 16);
+    color: white;
   }
 }

@@ -1,8 +1,10 @@
 import { useMediaQuery } from "react-responsive";
 import Button from "../Button/Button";
 import "./_CartYX1.scss";
+import { useNavigate } from "react-router-dom";
 
 const CartYX1 = () => {
+  const navigate = useNavigate();
   const isMobile = useMediaQuery({
     query: "(max-width: 48em)",
   });
@@ -26,7 +28,7 @@ const CartYX1 = () => {
       )}
       <div className="cartYX1__wrapper">
         <h4>yx1 earphones</h4>
-        <Button variant="transparent">see product</Button>
+        <Button variant="transparent" onClick={() => navigate('/yx1-earphones')}>see product</Button>
       </div>
     </div>
   );

@@ -15,9 +15,9 @@ const NavLinks = ({ variant }) => {
   return (
     <div className={linksClass}>
       {links.map((link, i) => (
-        <a key={`${link}${i}`} href={link === "home" ? `/` : `/${link}`} onClick={() => navigate(`/${link}`)}>
+        <button key={`${link}${i}`} onClick={() => navigate(`/${link}`)}>
           {link}
-        </a>
+        </button>
       ))}
     </div>
   );
