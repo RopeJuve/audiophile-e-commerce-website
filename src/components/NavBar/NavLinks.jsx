@@ -2,7 +2,7 @@ import "./_NavLinks.scss";
 import classNames from "classnames";
 
 const NavLinks = ({ variant }) => {
-  const links = ["Home", "Headphones", "Speakers", "Earphones"];
+  const links = ["home", "headphones", "speakers", "earphones"];
 
   const linksClass = classNames({
     "nav-link__container": variant === "footer",
