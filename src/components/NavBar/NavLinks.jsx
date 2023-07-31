@@ -12,7 +12,7 @@ const NavLinks = ({ variant }) => {
   return (
     <div className={linksClass}>
       {links.map((link, i) => (
-        <a key={`${link}${i}`} href={link === "Home" ? `/` : `/${link}`}>
+        <a key={`${link}${i}`} href={link === "home" ? `/` : `/${link}`}>
           {link}
         </a>
       ))}
